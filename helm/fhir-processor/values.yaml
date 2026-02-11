@@ -1,0 +1,34 @@
+image:
+  repository: ghcr.io/lilianasacorreia/fhir-processor
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8082   # ajusta se o teu serviço usar outra porta
+
+resources: {}
+
+env: []
+# Exemplo:
+# env:
+#   - name: KAFKA_BOOTSTRAP
+#     value: redpanda:9092
+#   - name: FHIR_SERVER_URL
+#     value: http://hapi-fhir:8080/fhir
+
+config:
+  enabled: false
+  data: {}
+  # Exemplo:
+  # data:
+  #   processor.properties: |
+  #     processor.batch.size=100
+  #     processor.mode=async
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts: []
+  tls: []

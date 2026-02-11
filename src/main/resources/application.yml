@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:2515}
+
+kafka:
+  bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+  topic: ${KAFKA_TOPIC_INBOUND_FHIR:inbound-fhir-transactions}
+  consumer: ${KAFKA_CONSUMER_GROUP:fhir-transaction-consumer}
+  autoOffset: ${KAFKA_CONSUMER_AUTO_OFFSET:earliest}
+
+fhir:
+  server:
+    url: ${FHIR_SERVER_BASE_URL:http://localhost:8080/fhir}
