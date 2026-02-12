@@ -21,7 +21,7 @@ env:
 #     value: http://hapi-fhir:8080/fhir
 
 config:
-  enabled: false
+  enabled: true
   data: {}
   # Exemplo:
   # data:
