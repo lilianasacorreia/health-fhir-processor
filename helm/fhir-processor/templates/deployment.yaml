@@ -27,14 +27,10 @@ spec:
               value: {{ .value | quote }}
             {{- end }}
           volumeMounts:
-            {{- if .Values.config.enabled }}
             - name: config-volume
               mountPath: /config
-            {{- end }}
 
       volumes:
-        {{- if .Values.config.enabled }}
         - name: config-volume
           configMap:
-            name: {{ include "fhir-processor.name" . }}-config
-        {{- end }}
+            name: fhir-processor-config
