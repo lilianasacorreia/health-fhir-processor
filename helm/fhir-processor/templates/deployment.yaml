@@ -51,4 +51,3 @@ spec:
           configMap:
             name: {{ include "fhir-processor.name" . }}-config
         {{- end }}
-        -
