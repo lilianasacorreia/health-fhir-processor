@@ -9,7 +9,10 @@ service:
 
 resources: {}
 
-env: []
+env:
+  - name: KAFKA_BOOTSTRAP_SERVERS
+    value: redpanda:9092
+
 # Exemplo:
 # env:
 #   - name: KAFKA_BOOTSTRAP
