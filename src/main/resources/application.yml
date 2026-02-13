@@ -9,4 +9,4 @@ kafka:
 
 fhir:
   server:
-    url: ${FHIR_SERVER_BASE_URL:http://localhost:8080/fhir}
+    url: ${FHIR_SERVER_BASE_URL:http://hapi-fhirt:8080/fhir}
