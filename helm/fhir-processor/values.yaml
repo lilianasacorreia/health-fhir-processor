@@ -7,7 +7,11 @@ service:
   type: ClusterIP
   port: 8082   # ajusta se o teu serviço usar outra porta
 
-resources: {}
+resources:
+  requests:
+    memory: 512Mi
+  limits:
+    memory: 1Gi
 
 env:
   - name: KAFKA_BOOTSTRAP_SERVERS
